@@ -3,6 +3,12 @@
 FFmpeg-Remux is an Android application that uses native FFmpeg libraries to remux (repackage) video and audio streams without re-encoding. It allows you to extract, copy, and repack video/audio tracks into a new container efficiently, preserving quality and saving time.
 
 ---
+## ☕ Support
+
+If you like this project, consider supporting me! 💙
+
+[![Donate with PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)]([https://www.paypal.me/yourusername](https://www.paypal.com/paypalme/2692sl))
+
 
 ## ✨ Features
 
