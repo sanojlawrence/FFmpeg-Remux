@@ -1,0 +1,14 @@
+prefix=../generated/x86
+exec_prefix=${prefix}
+libdir=../generated/x86/lib
+includedir=../generated/x86/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 61.19.101
+Requires: 
+Requires.private: libavutil >= 59.39.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -pthread -lm -latomic
+Cflags: -I${includedir}

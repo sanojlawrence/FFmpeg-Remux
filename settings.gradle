@@ -16,9 +16,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
     }
 }
 
 rootProject.name = "FFmpeg Remux"
 include ':app'
-include ':app:ffmpegremux'
+include ':ffmpegremux'

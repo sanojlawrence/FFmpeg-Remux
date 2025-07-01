@@ -1,0 +1,14 @@
+prefix=../generated/x86
+exec_prefix=${prefix}
+libdir=../generated/x86/lib
+includedir=../generated/x86/include
+
+Name: libswresample
+Description: FFmpeg audio resampling library
+Version: 5.3.100
+Requires: 
+Requires.private: libavutil >= 59.39.100
+Conflicts:
+Libs: -L${libdir}  -lswresample 
+Libs.private: -lm -latomic
+Cflags: -I${includedir}

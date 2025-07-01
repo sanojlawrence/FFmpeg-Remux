@@ -1,0 +1,14 @@
+prefix=../generated/x86_64
+exec_prefix=${prefix}
+libdir=../generated/x86_64/lib
+includedir=../generated/x86_64/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 59.39.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lm -latomic -landroid -lmediandk
+Cflags: -I${includedir}
