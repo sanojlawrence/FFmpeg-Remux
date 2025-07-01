@@ -71,13 +71,53 @@ Select a connected device or emulator.
 Click Run.
 
 ## ⚙️ Usage
-Open the app on your Android device.
+🏃 Example Usage
+Below is an example of how to remux a video file using FFmpegLoader:
 
-Select an input video file.
+```
+String path = " ";        // Input file path
+int audioTrack = 1;       // Audio track number to extract
+String dest = "";         // Output file path
 
-Choose which video and audio tracks to keep.
+String[] ffmpegCommand = new String[] {
+    "ffmpeg",
+    "-i", path,
+    "-map", "0:v:0",
+    "-map", "0:a:" + audioTrack,
+    "-c", "copy",
+    dest
+};
 
-Tap Start Remux.
+FFmpegLoader.executeAsync(ffmpegCommand, new FFmpegLoader.Callback() {
+    @Override
+    public void onComplete(int returnCode) {
+        Log.d("FFmpegDebug", "Completed with code: " + returnCode);
+    }
+
+    @Override
+    public void onProgress(float progress) {
+        Log.d("FFmpegDebug", "Progress: " + progress);
+    }
+
+    @Override
+    public void onLog(String logLine) {
+        Log.d("FFmpegDebug", "Log: " + logLine);
+    }
+
+    @Override
+    public void onError(String error) {
+        Log.d("FFmpegDebug", "Error: " + error);
+    }
+});
+```
+## Explanation
+-map 0:v:0 — Selects the first video track from the input.
+
+-map 0:a:1 — Selects the second audio track (index starts from 0).
+
+-c copy — Copies streams without re-encoding.
+
+FFmpegLoader.executeAsync(...) — Runs FFmpeg asynchronously and returns callbacks for progress, logs, completion, and errors.
 
 After completion, find the output file in the specified output folder.
 
