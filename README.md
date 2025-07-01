@@ -60,16 +60,6 @@ repositories {
 }
 ```
 
-
-## Build
-Open the project in Android Studio.
-
-Let Gradle sync and finish indexing.
-
-Select a connected device or emulator.
-
-Click Run.
-
 ## ⚙️ Usage
 🏃 Example Usage
 Below is an example of how to remux a video file using FFmpegLoader:
@@ -143,9 +133,6 @@ app/
 │   └── layout, drawable, etc.
 └── AndroidManifest.xml
 ```
-
-## 🛡️ License
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## 💙 Contributing
 Contributions, issues, and feature requests are welcome!
