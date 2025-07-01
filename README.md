@@ -1,7 +1,5 @@
 # FFmpeg-Remux
 
-# FFmpeg-Remux
-
 FFmpeg-Remux is an Android application that uses native FFmpeg libraries to remux (repackage) video and audio streams without re-encoding. It allows you to extract, copy, and repack video/audio tracks into a new container efficiently, preserving quality and saving time.
 
 ---
@@ -35,7 +33,6 @@ Remuxing means changing the container format (e.g., from `.mkv` to `.mp4`) witho
 
 ### Clone the repository
 
-```bash
 git clone https://github.com/sanojlawrence/FFmpeg-Remux.git
 cd FFmpeg-Remux
 ⚠️ Note: FFmpeg source files are not included in this repository to reduce size. The project is set up to use prebuilt .so files, and the ffmpeg source folder is excluded via .gitignore.
@@ -107,7 +104,3 @@ Android NDK and JNI documentation
 
 📧 Contact
 If you'd like to collaborate or have questions, open an issue or contact me via GitHub profile.
-
-yaml
-Copy
-Edit
