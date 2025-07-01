@@ -40,13 +40,28 @@ cd FFmpeg-Remux
 FFmpeg Libraries
 The project uses prebuilt FFmpeg .so libraries placed under:
 
-css
-Copy
-Edit
 app/src/main/jniLibs/<ABI>/
 You can build these yourself from FFmpeg sources (configured with only the needed components, e.g., demuxing/muxing support and GPL-free options) or use precompiled libraries.
 
-Build
+
+⚡ Using the FFmpeg AAR dependency
+If you'd like to include the prebuilt FFmpeg .aar as a dependency instead of including .so files manually, you can use:
+
+```
+implementation 'com.jldevelopers:ffmpegremux:1.0'
+```
+However, this library is currently only published to your local Maven repository (mavenLocal()), so you need to add this in your build.gradle:
+
+```
+repositories {
+    mavenLocal()
+    google()
+    mavenCentral()
+}
+```
+
+
+## Build
 Open the project in Android Studio.
 
 Let Gradle sync and finish indexing.
@@ -55,7 +70,7 @@ Select a connected device or emulator.
 
 Click Run.
 
-⚙️ Usage
+## ⚙️ Usage
 Open the app on your Android device.
 
 Select an input video file.
@@ -66,17 +81,17 @@ Tap Start Remux.
 
 After completion, find the output file in the specified output folder.
 
-💬 FFmpeg Commands
+## 💬 FFmpeg Commands
 The app uses FFmpeg commands similar to:
 
-```bash
+```
 
 ffmpeg -i input.mkv -map 0:v:0 -map 0:a:0 -c copy output.mp4
 -map options to select specific tracks
 
 -c copy to copy streams without re-encoding
 ```
-🏷️ Project Structure
+##  🏷️ Project Structure
 ```
 app/
 ├── java/com/jldevelopers/ffmpegremux/
@@ -89,17 +104,17 @@ app/
 └── AndroidManifest.xml
 ```
 
-🛡️ License
+## 🛡️ License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-💙 Contributing
+## 💙 Contributing
 Contributions, issues, and feature requests are welcome!
 Feel free to open an issue or submit a pull request.
 
-🙏 Acknowledgements
+## 🙏 Acknowledgements
 FFmpeg — the powerful multimedia framework
 
-Android NDK and JNI documentation
+## Android NDK and JNI documentation
 
 📧 Contact
 If you'd like to collaborate or have questions, open an issue or contact me via GitHub profile.
