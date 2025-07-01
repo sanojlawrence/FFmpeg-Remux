@@ -69,18 +69,15 @@ After completion, find the output file in the specified output folder.
 💬 FFmpeg Commands
 The app uses FFmpeg commands similar to:
 
-bash
-Copy
-Edit
+```bash
+
 ffmpeg -i input.mkv -map 0:v:0 -map 0:a:0 -c copy output.mp4
 -map options to select specific tracks
 
 -c copy to copy streams without re-encoding
-
+```
 🏷️ Project Structure
-bash
-Copy
-Edit
+```
 app/
 ├── java/com/jldevelopers/ffmpegremux/
 │   ├── FFmpegLoader.java       # JNI bridge to call FFmpeg
@@ -90,6 +87,8 @@ app/
 ├── res/
 │   └── layout, drawable, etc.
 └── AndroidManifest.xml
+```
+
 🛡️ License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
