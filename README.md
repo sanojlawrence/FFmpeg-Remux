@@ -7,7 +7,7 @@ FFmpeg-Remux is an Android application that uses native FFmpeg libraries to remu
 
 If you like this project, consider supporting me! 💙
 
-[![Donate with PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)]([https://www.paypal.me/yourusername](https://www.paypal.com/paypalme/2692sl))
+[![Donate with PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)]((https://www.paypal.com/paypalme/2692sl))
 
 
 ## ✨ Features
